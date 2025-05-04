@@ -1,3 +1,4 @@
+
 AZ-400 
 
 Orientation : 29th Mar. 2025 (1Hr.)
@@ -151,7 +152,7 @@ Introduction to DevOps :::
 		
 			Dev Environment
 			
-			Build Environment
+			Build Environment	-- Install the Build Tools
 			
 			Test Environments
 				- QA 
@@ -313,7 +314,7 @@ Introduction to DevOps :::
 			
 			AWS 	:  AWS Developer Tools - CodeCommit,CodeBuild,CodePipeline, etc......
 			
-			GCP 	:  DevOps Servifces 
+			GCP 	:  DevOps Services 
 			
 			
 	Azure DevOps Services ::: Az-400 - Azure DevOps Certification Code.
@@ -351,7 +352,6 @@ Introduction to DevOps :::
 Next :
 
 	Start with Azure DevOps Services - Azure Board
-
 
 
 #######################
@@ -775,4 +775,1605 @@ Next ::
 	Azure Boards 
 	Azure Repos 
 	Azure Pipelines
+				
+			
+		
+#######################
+Day 3 : 12th April 2025
+#######################			
+		
+	Azure Boards 
+	Azure Repos 
+	Azure Pipelines	
+	
+	
+	https://learn.microsoft.com/en-us/azure/devops/get-started/?view=azure-devops
+	
+	Login to Azure Portal :
+	
+		- Access Azure DevOps Services
+		
+			- Create Azure DevOps Organization1			Application Level
+				
+				- Azure DevOps Project1 				Micro-Service1
+				
+					- Create Azure Boards,Repos,Pipelines,Test,Artifacts...
+	
+				- Azure DevOps Project2 				Micro-Service2				
+				
+					- Create Azure Boards,Repos,Pipelines,Test,Artifacts...
+	
+			- Create Azure DevOps Organization2
+				
+				- Azure DevOps Project1 
+				
+					- Create Azure Boards,Repos,Pipelines,Test,Artifacts...
+	
+				- Azure DevOps Project2 
+				
+					- Create Azure Boards,Repos,Pipelines,Test,Artifacts...		
+					
+					
+		Azure Pipeline :
+		
+			- Azure Build Pipeline 
+			
+				- Perform Application Build in the Non-Prod Environments
+			
+			- Azure Release Pipeline 
+			
+				- Promote the Changes from Non-Prod to Prod Environment
+		
+			- Build Environments :
+			
+				- Managed Agents 
+				
+				- Self-Hosted Agents 
+				
+				
+			Build Environment (VM)	-- Install the Build Tools		
+				
+				- Self Hosted 
+					- Manually Create, Install the required Build Tools and maintain the Agent 
+					- This can be reusable 
+					
+					Agent Pool:
+						- Self Hosted Agent1 - Java Application Build --> Jdk,maven 
+						- Self Hosted Agent2 - Java Application Build --> Jdk,maven 
+						- Self Hosted Agent3 - Java Application Build --> Jdk,maven 
+					
+				- Azure Managed Agent 
+				
+					Agent Pool:
+						- Managed Hosted Agent1 - Java Application Build --> Jdk,maven 
+						- Managed Hosted Agent2 - Java Application Build --> Jdk,maven 
+						- Managed Hosted Agent3 - Java Application Build --> Jdk,maven 	
+		
+			Service Connections - Used to Access the external services 	
+	
+	
+	Azure Boards :
+	
+		- Based on the Project.
+		
+	Azure DevOps Project Types :
+	
+		- Basic 
+		- Agile 
+		- Scrum 
+
+		Basic Project Process:
+		
+			EPIC	
+				issue1
+					task1
+					task2
+				issue2
+					task 
+					
+		Agile Project Process:
+		
+			EPIC 					- Long Term Project Objective - Migrate 500+ Applications to Cloud
+				Feature - Q1		- ?
+					UserStory1	
+						task1
+						task2
+						bug2						
+					UserStory2
+				Feature - Q2
+					UserStory1 
+					UserStory2		
+				Feature - Q3
+					UserStory1 
+					UserStory2	
+				Feature - Q4
+					UserStory1 
+					UserStory2						
+
+		SCRUM Project Process:
+		
+			EPIC 					- Long Term Project Objective - Migrate 500+ Applications to Cloud
+				Feature - Q1
+					Product Backlog Item1	
+						task1
+						task2
+						bug2						
+					Product Backlog Item2
+				Feature - Q2
+					Product Backlog Item1
+					Product Backlog Item2				
+		
+		
+		
+		
+#######################
+Day 4 : 13th April 2025
+#######################		
+		
+		
+		https://aka.ms/azpipelines-parallelism-request
+		
+		Azure DevOps Projects along with the Build & Release pipelines 
+		
+		
+		
+		
+		- Agent --> Build Environment
+		
+		- Git Cli Commands 
+		
+		- Containerization 
+		
+			- Docker 
+			- Kubernetes
+		
+
+		
+		- Build & Release Pipeline : 
+		
+			Create/Written using *.yaml Scripts 
+			
+		- CICD Azure Pipeline Service are the Build Orchestration Tool 
+		
+		
+	
+		
+		- Agent --> Build Environment :::
+		
+			
+	Environments:
+	
+		Non-Prod Environments									Production Environments
+		
+			Dev Environment
+			
+			Build Environment	-- Install the Build Tools
+			
+			Test Environments
+				- QA 
+				
+				- UAT 					=============>				Production Servers 	
+
+				
+		- CI CD 
+		
+			CI --> Build Environment (VM)	-- Install the Build Tools	::: Microsoft Hosted Machines / Self Hosted Machines 
+			
+					- Create a Azure Virtual Machine :: Self Hosted Machines 
+					
+					- Install the Required Build Tools
+					
+						Java based web applications 							| 					.Net Application Build 
+						
+							git 																		git 
+							maven																		.Net SDK 
+							
+							Docker 																		Docker 
+								- Create Application Images 
+								- Publish the Application images to Container Registry 
+					
+					
+					
+					
+			CD --> Target Server (VM) using to deploy the Services
+					
+					- Create a Azure Virtual Machine 
+					
+					- Install the Required Tools to execute the Application Services		
+			
+			
+			
+		
+		
+		- Git Cli Commands 
+		
+			- Install git in Local Machine & VS Code 
+	
+			Misc Git Topics :::		
+			
+				- git file Workflow 
+				
+				- git installation 
+				
+				- Create Local Repository 
+
+				- .gitignore					# Is used ignore the files from tracking!
+				
+				- Misc. git command 		
+				
+				- Working with git config 
+				
+				- Working with undo - unstage 
+				
+				- Undo Commits - git reset / git revert 
+				
+				- Git Branches 
+				
+				- Branch creation
+				
+				- Merge 
+				
+				- Handle Merge Conflicts 
+				
+				- Rebase / squash 
+				
+				- Handle Local and Repositories 
+				
+					- git Push/Pull Commands 
+			
+		
+		
+		Use the  Remote Git Repositories :
+		
+			- Migrated/Import from GitHub Repositories  
+			
+			- New Azure Repositories
+		
+	
+	Pull Request :::
+	
+		- Created by the Developers Developers, it will be submitted for review and approval to merge to main branch.
+		
+		
+		
+	VCS : Version Control System :
+	
+		- Track the Changes 
+		- used to Version Control the Changes 
+		
+		
+	Distributed VCS :
+	
+		GIT is the Distributed VCS 
+		
+			- Azure Repos 
+			- GitHub 
+			- GitLab
+			- BiBucket 
+			- AWS CodeCommit 
+			
+			
+				- Local Machine	(Device)																		Remote Server (Device)
+				
+					- Repos created in the local machine(Developers' system)										Remote GIT Repositories
+					
+					
+					
+					https://EduDevOps1204@dev.azure.com/EduDevOps1204/Proj3/_git/TestRepo2
+					
+					
+			git clone https://EduDevOps1204@dev.azure.com/EduDevOps1204/Proj3/_git/TestRepo2
+			
+			
+			git clone			- To Copy/Clone the entire Remote Repo to Local Machine 
+												- Enable user access to that repo using PAT.
+												- 
+				git clone https://EduDevOps1204@dev.azure.com/EduDevOps1204/Proj3/_git/TestRepo2
+				
+			
+			git push 			- To Push the changes from local repo to remote repository
+			
+			git pull 			- 
+			
+			
+			git init 			- Used to Initialize a git repo
+								- It create default branch - main/master
+								- It create .GIT Directory 
+				
+			
+			
+			
+		
+		
+		git push 		-- c1		
+		
+		git pull -- Bring the latest changes from the remote repository to the local machine
+					Git Pull will keep the local repo. in-sync with remote repo.
+					
+					as a best practise issue git pull before git push. 
+					
+		
+		
+		
+		git push --- c2 
+		
+		
+		git rebase!
+		
+		
+		git switch -c <new_branch_name>		--> Create and switch to new branch
+		
+		git switch <existing_branch_name> 	--> to Switch beteen the branches 
+		
+	
+	- Containerization 
+			- It is a process of packaging the application along with its dependencies.
+			
+		Containers vs Virtual Machines 
+		
+		Virtual Machines (VM) :
+		
+			- VMs are Hardware level Virtualization 
+			
+			- VMs are created using Hypervisor 
+			
+			- VMs are used to execute the Operating System and its applications
+			
+			- VMs will be up and running even if there no active task or application
+		
+			- VMs consume more time and space to start the applications
+		
+		
+		
+		Containers :
+	
+		
+			- Containers are OS level Virtualization 
+			
+			- Containers are created using Container-Engine 
+			
+			- Containers are used to execute the task/AppDynamics. NOT Operating System!
+			
+			- Containers will immediately go to exit state, if there no active task or application
+		
+			- Containers consume less time and space to start the applications
+			
+			- Containers are used to reduce the No. of VMs. We cannot completely eliminate VMs
+			
+	
+	
+	
+		Terminologies :
+		
+			- Container Engine 
+			
+			- Container Images
+			
+			- Containers
+			
+			- Container Registry 
+			
+			- Container Repositories
+			
+			
+		Install and config container Engine
+		
+		Docker Container Engine 
+		
+		Docker CLI Commands 
+			
+			
+		- Docker 
+		- Kubernetes
+
+		
+#######################
+Day 5 : 19th April 2025
+#######################	
+
+
+	Build Environment :::
+	
+	
+	
+	git Cherrypick :
+	
+	git cherrypick <commit_id>
+	
+	git cherrypick <commit_id1> <commit_id2>
+	
+	- As per the best practise git cherrypick is not recommended to use.
+	
+	
+	Containers :
+	
+		- Deploy the Containerized application using Kubernetes :
+		
+	
+	- Containerization 
+			- It is a process of packaging the application along with its dependencies.
+
+			
+	Use Cases :::
+	
+	- Infra-Structure Perspective :
+	
+		- To reduce the no. of VMs 
+		
+			- VM 
+				- Install Docker 
+					- C1		- Java 
+					- C2 		- .Net 
+					- C3		- Python 
+					- C4		- Ruby 
+					- C5 		- Angular/NodeJS
+					
+					
+		- Jenkins_Master(VM) 	( Create and Manage the Jenkins CICD Pipeline Projects)
+		
+								(Perform Application Builds)
+					- Jenkins_Slave1(VM)		- Java 		
+					- Jenkins_Slave2(VM)		- .Net 			
+					- Jenkins_Slave3(VM)		- Python 	
+					- Jenkins_Slave4(VM)		- Ruby 	
+					- Jenkins_Slave5(VM) 		- Angular/NodeJS	
+	
+		- Jenkins_Master(VM) 	( Create and Manage the Jenkins CICD Pipeline Projects)	
+			
+			Jenkins_Slave1(VM) 
+				- Install Docker Engine 
+					- Create Docker Container1 - Java
+					- Create Docker Container2 - .Net 
+					- Create Docker Container3 - Python 
+					- Create Docker Container4 - Ruby 
+					- Create Docker Container5 - Angular/NodeJS					
+	
+	
+
+	
+	- Development/Deployment Perspective :
+	
+		- It is a process of packaging the application along with its dependencies.
+		
+		Scenario 1 :
+		
+			- Developer :
+				- java program in my dev machine 
+					- jdk 11, maven 				= Build the java program 
+					- mywebapp.war 					- # artifact get created
+					- Web Application Server(Tomcat/Nginx/httpd)
+					- Unit Testing --- (jdk_11, tomcat_8.5)				
+					- Deploy mywebapp.war to the Target Server 
+					
+				- Using Docker Containerization :
+				
+					- java program in my dev machine 
+						- jdk 11, maven 				= Build the java program 
+						- mywebapp.war 					- # artifact get created
+						- Web Application Server(Tomcat/Nginx/httpd)
+						- Unit Testing --- (jdk_11, tomcat_8.5)				
+						- Use Docker Cli Commands to  package the application :
+						
+							Create package : (mywebapp.war | jd11,tomcat_8.5) ==> mywebapp_img
+							
+							- Publish images to dockerhub container registry
+					
+					
+					
+					
+				- QA (VM)		mywebapp.war  
+							- Using Docker CLI Commands, download the application Images to target servers.
+							
+							(mywebapp_dependencies | jd11,tomcat_8.5) ==> mywebapp_img
+							
+							- Using mywebapp_img Create Container and run the testing
+							
+							
+					- jdk_8, tomcat_8
+					
+					- Used the application image: mywebapp_img.
+				
+				- UAT 
+				
+				- PROD 
+	
+			
+			
+	
+	
+		
+		Terminologies :
+		
+			- Container Engine 				# Is used to Create and manage the containers
+			
+			- Container Images				# Is a static file that defines the dependencies
+											# It is non-executable 
+											# It composed of various Layers that defines the incremental changes.
+											
+			
+			- Containers					# Is an executable unit of Container Image.
+											
+
+			- Container Registry 			# Used to save the snapshots of the Container Images.			
+			
+			- Container Repositories		# Is a subset of Container  Registry
+			
+													At Enteprise Level : We create DockerHub/ACR Account
+													
+													`- Container Registry
+															- Container Repositories
+			
+			
+		working directory 				Azure/GitHub Repo 					Application Snapshots 					Container Registry 
+																			Jfrog Artifactory/ AzArtifacts			DockerHub/ACR
+		
+		index.java 							index.java_v1.0		==> 		mywebapp.war_SNAP_SHOT_v1.0			==>	mywebapp_img:v1.0
+		index.java 							index.java_v1.1		==> 		mywebapp.war_SNAP_SHOT_v1.1			==>	mywebapp_img:v1.1
+		index.java 							index.java_v1.2		==> 		mywebapp.war_SNAP_SHOT_v1.2			==>	mywebapp_img:v1.2
+		index.java 							index.java_v1.3		==> 		mywebapp.war_SNAP_SHOT_v1.3			==>	mywebapp_img:v1.3
+		
+		
+		Docker Container Image :
+		
+			- Docker Commit 
+			
+			- Docker Build
+			
+						Instructions to create various layers of image
+		
+		
+		Install and config container Engine
+		
+			https://portal.azure.com/#home
+			
+				- Search for Virtual Machine
+				
+				- Connect to VM using MobaXterm/putty(SSH Agent)
+					- Host_Name : public_ip address 
+					- User_Name : azureuser
+					- Credential: private key file --> *.pem
+		
+		AppBuild_Server:
+		
+			- git 
+			
+			- maven 	==> Build Java Application 
+			
+			- docker 
+			
+		- Connect to VM using MobaXTerm 
+		
+		- sudo -i
+		
+		- git --version 
+		
+		- apt install git -y 
+				
+		- apt install maven -y 
+		
+		- apt install docker.io -y 
+		
+		Docker CLI Commands :
+		
+			- docker --version 
+			
+			- docker images 		# List the Images 
+			
+			- docker ps 			# List the Active/Running Container 
+			
+			- docker ps -a 			# List all the Active/Stopped Container
+	
+			- docker pull <image_name>
+			
+			- docker run <image_name>	# To Create and run a Container based on the image name.
+			
+			Three Modes of Execution :
+			
+			1. Foreground/Attached Mode 		# Hold the Terminal.
+			
+					docker run <image_name>		# Default Mode of Execution 
+			
+			2. Background/Detached Mode 
+			
+					docker run -d <image_name> 
+			
+			3. Interactive Mode 
+			
+					docker run -it <image_name> bash
+					
+			
+			docker exec -it <container_id> bash		# Login to Running Container.
+			
+			
+#######################
+Day 6 : 20th April 2025
+#######################		
+
+
+		docker start <container_id>
+		
+		docker stop <container_id>
+		
+		Create Docker Images :
+		
+			- Docker Commit :
+			
+				- It is used create an Container Image based on the existing Container Reference.
+				- Create Server Templates 
+				- Reusable
+				
+				Syntax: 
+				
+					docker commit <Container_id> <DockerHub_Repository_Name>/<New_Docker_Image_Name>:<tag_Number>
+					
+				Eg.: 
+				
+					docker commit 4acef096ea94 loksaieta/edu-az-appbuildtemplate1:v1.0
+				
+				
+			Publish the Image to Container Registry :
+			
+				- Create PAT in DockerHub 
+			
+				- docker login 
+				
+					Eg.: 
+					
+					docker login -u loksaieta
+					
+						
+				- docker push 
+				
+					Eg.: 
+					docker push loksaieta/edu-az-appbuildtemplate1:v1.0
+				
+				docker pull loksaieta/edu-az-appbuildtemplate1:v1.0
+				
+				
+				
+			- Docker Build	::::
+			
+				- It is used to Create a container Image based on the Dockerfile references
+				- Dockerfile is a static file that define the properties of the Container
+				- It composed of various instructions.
+				- This Dockerfile will be created by the developers 
+				- Dockerfile will be part of the source-code repository & used in cicd pipeline, during automate builds.
+				
+			How to Create a Dockerfile ?
+			
+			IAC - Server Templating / Configuration Management / Infra-Structure Provisioning 
+					Docker/Vagrant		Ansible/Chef/Puppet			Terraform/CFT/ARM
+			
+			FROM 		# Used to Identify the Base Image.
+			RUN 		# Excute the Package - apt 
+			
+			
+			vi Dockerfile 
+			
+			FROM ubuntu
+			RUN apt update -y
+			RUN apt install git -y 
+			RUN apt install maven -y 
+
+			Syntax: 
+				
+				docker build -t <DockerHub_Repository_Name>/<New_Docker_Image_Name>:<tag_Number> .
+
+			Eg.: 
+			
+				docker build -t loksaieta/edu-az-appbuildtemplate2 .			# "." Denotes the Dockerfile reference.
+																				# Run the Docker Build Command from path of Dockerfile 
+																				
+																				
+			Dockerfile Instructions :::
+			
+			
+				FROM 			# Used to Identify the Base Image.
+				
+				RUN 			# Excute the Package - apt  
+				
+				COPY 			# To copy the file from the host volume to the container volume 
+				
+				CP				# To copy the file within the container volumes
+				
+				ADD 			# To copy the file from the host volume to the container volume as well as from the external URLs
+									Eg.: wget <web-url>
+									
+				WORKDIR			# Setup the Current Working Directory 
+				
+				ENV 			# Setup the Environment Variable - PATH - JAVA_HOME 
+				
+				ARG 			# Pass the Input Parameters 
+				
+				CMD 			# It is used set the start-up task to the container.
+								# It can be modified at run-time. 
+																					
+				ENTRYPOINT		# It is used set the start-up task to the container.
+								# It cannot be modified at run-time.	
+
+				EXPOSE			# To Setup the Container Port
+				
+			
+	Use Case 1 :
+	
+	Setup - Self-Hosted Build Agent :
+		
+		Launch a VM 
+		
+		git --version 
+		
+		apt install openjdk-17-jre -y		
+
+		apt install maven -y
+		
+		- Perform Application Build -- 
+		
+			- SCM Checkout 			https://github.com/Edu-az400-apr0525/java-webapp-project
+			
+			- Application Build 	--> Compile the Source Code / Perform Automated Unit Testing / Create Artifacts 
+			
+				Maven Goals :
+				
+					- mvn compile 	# Just compile the source-code
+				
+					- mvn test 		# To compile the source-code & Perform Automated Unit-Testing 
+					
+					- mvn package 	# To Compile,test and create artifacts in target folder
+					
+					- mvn clean		# To clean-up the target folder 
+					
+			- Application Image Build 		--> Create an Application Image using the Application Artifacts
+			
+			Dockerfile :
+			
+			FROM tomcat:8.0				
+			COPY target/*.war /usr/local/tomcat/webapps
+			EXPOSE 8089		
+			
+			
+			docker build -t loksaieta/edu-az-javawebapp1 .
+
+				
+			Application Access ::
+
+			
+		Container Orchestration using Kubernetes :::
+		
+			Micro-Service 
+			
+			3-tier Application Architecture 
+				
+			
+			<external_IP_Addr of VM> : 8080
+			
+		Port Mapping / Port Binding :::
+		
+			docker run -it -p 8089:8080 loksaieta/edu-az-javawebapp1
+			
+			-p host_port:container_port 
+		
+		
+		
+		Azure Disk / AzArtifacts / AzPipeline-Volumes 
+		
+		
+		Volumes :::
+		
+		docker volume :::
+		
+		docker volume create edu-az-vol 
+		
+		docker volume inspect edu-az-vo1
+		
+		docker run -it --mount source=edu-az-vo1,destination=/edu-az-vo1 ubuntu bash
+		
+		Persistant Volume :
+		
+		Containers --> run stateless applications
+		
+		3 - Tier Application Architecture :::
+		
+		User Sign_IN Services 
+		
+		- Front-End Layer 	# User Interface 	- C1 
+		
+		- Application Layer # Business Logic 	- C2 
+		
+		- Back-End Layer 	# DataBase 			- C3 		==> 1 TB of Volume (External Storage Server)
+		
+		
+		
+		Container Orchestration :::
+		
+			- Docker Swarm  
+			
+			- Kubernetes 
+			
+				- Open-Source Container Orchestration Tool 
+				- To ensure high availability of Application running thru container by creating the replicas.
+				- It is meant for Micro-Service Based Application Architecture
+				- It support Auto-Scaling, Load Balancing, Self-Healing 
+				
+				- pods --> Smallest/Atomic unit of task 
+							Pod is used to execute the container
+				
+				- Kubernetes Controller Manager :
+				
+				
+			Kubernetes Architecture :::
+				
+			Managed Services :
+			
+			Azure : ACS / ACR / AKS 
+				
+				
+			3 - Tier Application Architecture :::
+		    
+		    User Sign_IN Services 
+		    
+		    - Front-End Layer 	# User Interface 	- C1.1,C1.2,C1.3 
+		    
+            - Application Layer # Business Logic 	- C2.1,C2.2,C2.3  
+            
+            - Back-End Layer 	# DataBase 			- C3.1,C3.2,C3.3 
+			
+Next :
+
+	Az Pipelines :
+	
+		- Az Build Pipelines 
+		
+		- Az Release Pipelines
+		
+		
+
+########################
+Day 7 : 26th April 2025
+########################	
+
+
+	- Azure DevOps Project 
+	
+	- Azure Repository 
+	
+		- Import https://github.com/Edu-az400-apr0525/java-webapp-project
+		
+	- Create azure Pipeline :
+	
+		- MS Managed Agent 
+			- Cost effective
+		
+		- Self Hosted Agent -- Create a VM - (Azure Cloud/AWS/On-Prem) - Build_Server(git,maven,docker)
+			- User gets the full control of the server and reusability.
+			
+			- Configure Azure Agent. 
+			
+			
+	- Docker Cli Commands :
+		- Dockerfile 
+		- Docker Build Command 
+		
+	- Kubernetes :
+		- Deploy the Containerized Services
+		
+	- Prepare the Target Environments -- Create a VM - (Azure Cloud/AWS/On-Prem) -- to Execute the Micro-Services 
+	
+		
+			- Docker Swarm  
+			
+				- Docker Swarm is meant only for Docker Containers 
+				- Docker Swarm - to ensure high availability of Application running thru container by creating the replicas.
+				- It will not support Auto-Scaling, Load Balancing, Self-Healing 
+				
+				
+			- Kubernetes 
+			
+				- Open-Source Container Orchestration Tool 
+				- To ensure high availability of Application running thru container by creating the replicas.
+				- It is meant for Micro-Service Based Application Architecture
+				- It support Auto-Scaling, Load Balancing, Self-Healing 
+				
+				- pods --> Smallest/Atomic unit of task 
+							Pod is used to execute the container
+				
+				- Kubernetes Controller Manager :
+				
+			Kubernetes Architecture :::
+				
+			Managed Services :
+			
+			Azure : ACS / ACR / AKS 
+			
+			
+			SCM Checkout 
+			
+			
+		Build Environment --> Node/Agent 
+		
+			Agent pool:						# It is a collection of Build Agents 
+				- Build Agents/VM/Server  
+				
+				
+				
+			Agent pool : (JavaAgentPool1)
+				Build-Server/Agent/Node/VM1 	--> 	1 
+				Build-Server/Agent/Node/VM2 
+				Build-Server/Agent/Node/VM3 
+				Build-Server/Agent/Node/VM4 
+				
+				
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+#trigger:
+#- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'pom.xml'
+    mavenOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: default
+    jdkArchitectureOption: 'x64'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    goals: 'package'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(system.defaultworkingdirectory)'
+    Contents: '**/*.war'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
+
+
+	Configure Self-Hosted Azure Agent :
+	
+		- Self Hosted Agent -- Create a VM - (Azure Cloud/AWS/On-Prem) - Build_Server(git,maven,docker)
+			- User gets the full control of the server and reusability.
+			
+			- Configure Azure Agent. 
+			
+				- Login to Azure DevOps Portal 
+				
+				- Create Azure User PAT 		
+				
+				dafsdf
+				
+				
+				javaappbuildsap1
+				
+				
+				myjavabuildagent1
+
+				
+				- Create an Agent Pool 
+				
+				- Create an Agent in that Agent Pool 
+				
+					Start the Agent to listen to the Azure Pipelines.  	3GB RAM 2CPU -> 1800 INR / month  
+					
+	
+Create the agent
+~/$ mkdir myagent && cd myagent
+~/myagent$ tar zxvf vsts-agent-linux-x64-4.254.0.tar.gz
+Configure the agentDetailed instructions
+~/myagent$ ./config.sh
+Optionally run the agent interactively
+If you didn't run as a service above:
+~/myagent$ ./run.sh
+
+
+####
+mkdir myagent && cd myagent
+
+wget https://vstsagentpackage.azureedge.net/agent/4.254.0/vsts-agent-linux-x64-4.254.0.tar.gz
+
+tar zxvf vsts-agent-linux-x64-4.254.0.tar.gz
+
+./config.sh
+
+Y
+
+https://dev.azure.com/LoksaiTrainingOrg/
+
+>> End User License Agreements:
+
+Building sources from a TFVC repository requires accepting the Team Explorer Everywhere End User License Agreement. This step is not required for building sources from Git repositories.
+
+A copy of the Team Explorer Everywhere license agreement can be found at:
+  /home/ubuntu/myagent/license.html
+
+Enter (Y/N) Accept the Team Explorer Everywhere license agreement now? (press enter for N) > Y
+
+>> Connect:
+
+Enter server URL > https://dev.azure.com/LosdfsdfsdfsdfOrg/
+Enter authentication type (press enter for PAT) >
+Enter personal access token > **sdfsdfsdfsdfsd****************************************
+Connecting to server ...
+
+>> Register Agent:
+
+Enter agent pool (press enter for default) > javaappbuildsap1
+Enter agent name (press enter for ip-172-31-0-90) > myjavabuildagent1
+Scanning for tool capabilities.
+Connecting to the server.
+Successfully added the agent
+Testing agent connection.
+Enter work folder (press enter for _work) >
+2025-04-26 17:41:15Z: Settings Saved.
+ubuntu@ip-172-31-0-90:~/myagent$
+
+####
+
+
+ubuntu@ip-172-31-0-90:~/myagent$ ./run.sh
+Scanning for tool capabilities.
+Connecting to the server.
+2025-04-26 17:45:37Z: Listening for Jobs
+
+
+########################
+Day 8 : 27th April 2025
+########################	
+
+
+	- Docker Build and Deploy to Kubernetes thru azPipeline :
+	
+	- Kubernetes 
+	
+	- Kubernetes Architecture ::
+	
+			- Kubernetes 
+			
+				- Open-Source Container Orchestration Tool 
+				- To ensure high availability of Application running thru container by creating the replicas.
+				- It is meant for Micro-Service Based Application Architecture
+				- It support Auto-Scaling, Load Balancing, Self-Healing 
+				- Able to Upgrade or Downgrade the Application services without any downtime.
+				
+				- pods --> Smallest/Atomic unit of task 
+							Pod is used to execute the container
+				
+				- Kubernetes Controller Manager :
+				
+				- AKS/EKS/GKE		==> Managed Services + Load Balancer
+				
+	- Kubernetes Architecture :::	Kubernetes Administration - CKA/CKD/CKSA by CNCF
+	
+	- All the Kubernetes Architecture Components 
+	
+		- API Server 
+		- ETCD  			==> Acts as a single point of source of information of kubernetes
+		- Scheduler 
+		- Controller Manager 
+		
+		- Kubelet 
+		- Kubeproxy 
+		- CRI - Container Runtime Interface - Container-D 
+				
+	- Terminologies/Concepts in Kubernetes 
+			
+		- Cluster 			# Collection of Kubernetes WorkerNodes
+
+		- KubeADM 			# Command Line Utility to Configure Kubernetes Architecture
+		
+		- KubeCTL			# Command Line Utility to interact with Kubernetes Master  
+		
+		- Pods 				# Smallest / Atomic unit of task that runs in Kubernetes
+		
+		- Pod Networking 
+		
+		- Controller Objects 
+			- Replicasets 
+			- Deployment 
+			- Daemonset 			
+		
+		- Services 
+			- ClusterIP 
+			- NodePort 
+			- Load Balancer 
+			
+			- Ingress Controller 
+			
+		- Kubernetes Persistant Volumes 
+		
+			- HostPath Volume 
+			- ConfigMaps 
+			- Secret
+			- Persistant Volumes 
+			- Persistant Volume Claim
+			
+		- Kubernetes Security - RBAC
+		
+		
+	Kubernetes Architecture ::
+	
+		- Master and WorkerNodes :
+		
+			Kubernetes_Master :		
+
+				Kubernetes_Cluster1 
+					- Kubernetes_WorkerNode1
+					- Kubernetes_WorkerNode2
+					- Kubernetes_WorkerNode3
+				
+		Ensure High Availability :
+		
+			- Replication of Pods 			==> replicasset 		-- 5 replicas of pods - Controller Manager 
+			
+			- Replication of WorkerNodes 	==> Auto-Scaling Groups / Deployment Groups - 3 WorkerNodes 
+			
+			
+			
+			Application : 
+			
+				==> 5 Prod Servers ==> 
+				
+				==> Pod Replicas 
+				
+						--> Web_Appln. 		--> 	10000 Users 	===> 100 Replicas Pods
+						
+											--> 	50000 Users 	===> 500 Replicas Pods	
+			
+			
+				
+				
+		NameSpaces -> Logical Partition of Kubernetes Cluster 
+		
+		Environments :
+		
+			Dev NameSpace 
+			
+			QA NameSpace
+			
+			UAT NameSpace
+			
+			PROD NameSpace
+				
+			
+		Kubernetes_Master(VM)									- On-Prem	
+			
+			Kubernetes_Master(VM) :								- US Region (Azure)	
+
+				Kubernetes_Cluster1 
+					- Kubernetes_WorkerNode1(VM)				- US Region
+					- Kubernetes_WorkerNode2(VM)				- US Region
+					- Kubernetes_WorkerNode3(VM)				- US Region		
+
+				Kubernetes_Cluster2 
+					- Kubernetes_WorkerNode1(VM)				- IND Region
+					- Kubernetes_WorkerNode2(VM)				- IND Region
+					- Kubernetes_WorkerNode3(VM)				- IND Region		
+
+
+			Kubernetes_Master(VM) :								- US Region (AWS)	
+
+				Kubernetes_Cluster1 
+					- Kubernetes_WorkerNode1(VM)				- US Region
+					- Kubernetes_WorkerNode2(VM)				- US Region
+					- Kubernetes_WorkerNode3(VM)				- US Region		
+
+				Kubernetes_Cluster2 
+					- Kubernetes_WorkerNode1(VM)				- IND Region
+					- Kubernetes_WorkerNode2(VM)				- IND Region
+					- Kubernetes_WorkerNode3(VM)				- IND Region	
+					
+					
+	Working with Open-Source Kubernetes :
+	
+		Setting up the Kubernetes Master and WorkerNodes - Creating Kubernetes Cluster 
+	
+		- Create using Kubeadm
+		
+		- Kubernetes Dashboards/prometheus/grafana/ using Helm Charts 
+	
+		- Create and Configure Kubernetes_Master & Kubernetes WorkerNodes using kubeadm. 
+
+	
+	Working with Managed Services -  Kubernetes :
+	
+		Setting up the Kubernetes Master and WorkerNodes - Creating Kubernetes Cluster 
+	
+		- Create using Web-Services 
+		
+			pipeline1: 		
+				build and Deploy to QA 
+				
+			Pipeline2:
+				Perform QA Testing 
+				
+			Pipeline3:
+				Release to UAT Environment for UAT Testing 
+				
+			Pipeline2:
+				Perform UAT  Testing 			
+			
+		
+		
+		VS Code -- IDE 	-- Develop the Code 
+						-- Push the Changes to Az_Repo(master)
+						-- Trigger the Pipeline 
+					
+					
+		https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+		
+		
+	
+	Working with Deployment Controller Object :
+	
+	
+
+	Deployment Controller Object :::
+	
+		--> It is used to deploy the pods and ensure high availability of pods by creating pod replicas 
+		--> 1. Create Muliple instance/replicas/copies of pods 
+			2. Used to Scale-Up / Scale-Down the Pods 
+			3. Used to Upgrade the application pods 
+			4. Used to Down-grade/roll-back the application pods
+		--> The upgrade/down-grade of application pods can be done without any downtime. 
+		--> To achieve zero-downtime during upgrade/down-grade, By Default, it used Rolling-Update Deployment Strategy.	
+
+		- Upgrade the application pods 
+		- Down-grade/roll-back the application pods
+		
+		
+		mywebapp:v1.0 			==> 	mywebapp:v2.0
+		
+		Rolling-Update Deployment Strategy 
+		
+		pod1	--> nginx:stable-otel		Upgrade to	 nginx:stable-perl
+		
+		pod1.1  --> Upgrade to	 nginx:stable-perl
+		
+		pod2	--> nginx:stable-otel		Upgrade to	 nginx:stable-perl
+		
+		pod2.1  --> Upgrade to	 nginx:stable-perl
+		
+		pod3 	--> nginx:stable-otel		Upgrade to	 nginx:stable-perl
+		
+		pod3.1  --> Upgrade to	 nginx:stable-perl
+		
+		--> Deployment Object
+		
+		--> Replicaset
+		
+		--> Pod Instances
+
+
+
+
+######################
+Day 9 : 03th May 2025
+######################
+
+	IAC - Infra-Structure As Service tools 
+	
+			-> Resource Provisioning 
+			
+			-> Resource Configuration 
+			
+		- Azure Resource Manager 
+		
+		- Terraform 
+		
+		- Ansible/Chef/Puppet
+		
+	IT Security Team :
+	
+	Automate the Application Deployment in Kubernetes 
+	
+	
+	
+	- Azure Portal  						==> Resource Provisioning & Configuration
+	
+	- Azure CLI 							==> Resource Provisioning & Configuration
+	
+	- Az Resource Manager(ARM) Templates 	==> Resource Provisioning & Configuration / Cloudformation(AWS)
+	
+	- Terraform								==> Resource Provisioning on any platform - Azure/AWS/GCP/On-Prem 
+
+	- Ansible/Chef/Puppet					==> Configuration Management Tools 
+	
+
+	Understand the basics of IAC :
+	
+	
+	Infra-Structure Management : 
+	
+		-> Resource Provisioning 
+		
+		-> Resource Configuration 
+		
+	Terraform Working Priciples :
+	
+		-> Identify the Scope(Target)		# Azure Registry 
+		
+		-> Write Terraform Scripts 			# Using Azure Registry Terraform Documentations
+		
+		-> Perform Terraform Init 			# To Initialize Terraform Provider 
+		
+		-> Perform Terraform Plan			# To Preview the Terraform Script and Resources 
+		
+		-> Perform Terraform Apply			# To implement the actual changes in Target Environment
+		
+	
+	Terraform StateFile :					# To maintain the current state of Resource in the Real Infra-Structure.
+	
+	HCL : Hashi-Corp Declarative Language 
+			To create Terraform Scripts 
+			
+			*.tf 
+			
+	Working with Terraform to Provision Azure Resources :
+	
+		- Terraform Registry 
+		
+		- Terraform installation 
+			
+			- Install Terraform in Local Machine 
+			
+				# https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+				
+				# Manual Installation : https://developer.hashicorp.com/terraform/install
+					Select -> Windows -> AMD64 Download 
+					
+				Using Manual Approach - Install Terraform on local windows machine 
+				
+					- Download Windows AMD64 Version Terraform -- zipfile 
+						- Right Click and Extract all 
+							- Get the Extracted Terraform Folder 
+								- Get the terraform - binary file 
+								
+					- Setup Environment Variable for terraform binary file 
+						- from windows start menu, search for enviroment variable 
+							- click of edit enviroment variable setting 
+								- find system properties dialog 
+									- select enviroment variables button
+										- On Environment Variables Dialog 
+											- goto to System Variable 
+												- Select path variable and edit 
+													- Click on New 
+														- add C:\Softwares\terraform_1.7.2_windows_amd64
+															- apply the changes and close the settings
+				
+		- Install Visual Studio Code 	- IDE used to create Terraform Projects 
+			
+				https://code.visualstudio.com/download
+				
+		
+		- Open Visual Studio Code - Create Terraform Project 
+					
+		- Install Hashi-Corp Terraform Provider for Visual Studion Code Extension.
+		
+			
+			- Visual Studio Code IDE - Create *.tf Scripts 
+			
+			- Terraform cli Commands to execute the *.tf Scripts
+			
+	
+		https://registry.terraform.io/browse/providers
+		
+		Login to Azure Portal :
+		
+		Subscription ID : Free-Subscription / Pay-As-Go Subscription ==> ID 
+		
+				
+		
+		Create App Registration :		edu-az400-app1
+		
+		Tenant ID :	
+		
+		Client ID :	\
+		
+		Client Secret ID : 
+		
+				
+		
+			edu-az400-app1-cs1
+			
+		# In AWS : Access Key & Secret Key :
+		
+azurerm.tf 
+
+
+terraform {
+  required_providers {
+    azurerm={
+        source = "hashicorp/terraform-provider-azurerm"
+        version = "4.27.0"
+    }
+  }
+}
+
+provider "azurerm" {
+    subscription_id = "hbkjbkjb"
+    tenant_id = ",,nnl"
+    client_id = "kkjbkjb"
+    client_secret = "bjkjbkjn4"
+    features {
+      
+    }
+}
+
+resource "resource_group_name" "sa_webapgrp1" {
+  name = "mywebappgrp1"
+  location = "Central India"  
+}
+
+
+resource "azurerm_service_plan" "az_400_sp1" {
+  name                = "mywebapp-sp1"
+  resource_group_name = azurerm_resource_group.sa_webapgrp1
+  location            = "Central India"
+  os_type             = "Linux"
+  sku_name            = "F1"
+}
+
+resource "azurerm_linux_web_app" "az_400_appserv1" {
+  name                = "az-400-appserv1"
+  resource_group_name = azurerm_resource_group.sa_webapgrp1
+  location            = "Central India"
+  service_plan_id     = azurerm_service_plan.az_400_sp1
+
+  site_config {
+    always_on = false
+  }
+}
+
+
+	Using Terraform we can perform :
+	
+		- Add/Provision the Resource 		+ 
+		
+		- Modify/Alter the Resource 		~ 
+		
+		- Delete/Destroy the Resource 		-
+		
+		
+
+GitOps ::::
+
+	Environment to Test my application
+	
+	CICD Pipeline :
+	
+	- Create the Infra-Structure Dynamically. 
+	
+		- Build Environment (Hosted Agent)
+		
+		- Test Environments(QA/UAT)	==> Create Dynamic Test Environments 
+
+		Terraform
+		
+		
+	DevOps Pipeline :::
+	
+	Scenario 1: 
+	
+		CICD Pipeline1: 
+		
+		
+			- SCM_Checkout -> Application_Build -> Docker_Image_Build -> Publish_Image 
+			
+			--> Deploy to QA Server --> Automate QA-Testing --> Deploy to UAT --> Perform UAT Testing 
+						
+			- Deploy to Prod 
+			
+			
+		Pipeline1 (IAC - Infra-Structure Provisioning & Configuration):
+		
+			- SCM_Checkout --> Create New_QA_Server(Terraform)	--> Configure New_QA_Server(Ansible) 
+
+		Pipeline2 - CICD 
+			- SCM_Checkout -> Application_Build -> Docker_Image_Build -> Publish_Image 
+			
+			--> Deploy to New_QA_Server --> Automate QA-Testing			
+			
+			
+	Scenario 2:
+	
+		Pipeline1 :
+		
+			- SCM_Checkout -> Application_Build -> Docker_Image_Build -> Publish_Image -> Create New_QA_Server(Terraform) -> Configure New_QA_Server(Ansible) --> Deploy to New_QA_Server --> Automate QA-Testing --> Send Test Report --> Destroy New_QA_Server
+			
+		Pipeline2 :
+			- Deploy to UAT 
+		
+		Release Pipeline :
+			- Deploy to Prod 
+			
+			
+	Ansible :
+	
+		--> Ansible Architecture :
+		
+			-> Ansible Controller 
+			
+			-> Ansible Nodes 
+			
+			-> Inventory File 					# Details about the target server 
+			
+			-> Ansible Modules 					# Set of functions 
+			
+			-> Ansible Playbooks/Adhoc Commands 
+			
+			
+			
+		Configuration ::
+		
+			- Install/Uninstall/Update packages 
+			
+			- Start/Stop/Restart any Service 
+			
+			
+			Eg> 
+			
+			
+			- Ansible Adhoc Commands :
+			
+				- Execute a module in the target server 
+				- cannot be reusable
+			
+				Install GIT in Ansible Node(Ubuntu) :
+				
+					- apt install git
+					
+			- Ansible Playbooks :
+				
+				
+				- Execute series of Tasks(Modules)
+				- Can be Reusable
+				- Playbooks are written using *.yaml scripts
+				
+				
+				Install Tomcat in Ansible Node(Ubuntu)
+				
+					- Install Pre-requisities - Jdk 
+					
+					- Install Tomcat 
+					
+					- Post Installation Activities - Start Tomcat Service 
+					
+			
+	https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html		
+		
+
+
+Next :
+
+	Kubernetes Services :
+	
+		- NodePort Service			# Expose the Kubernetes Pods to Internet 
+									# NodePort range : 30000 to 32767		
+									
+		- ClusterIP Service			# It is default service used to access the pods internally
+		
+		- Load Balancer Service
+		- Ingress Controller 
+		
+		
+	Azure Service Connection to external resources :
+		
+		
+	https://learn.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops
+		
+	https://learn.microsoft.com/en-us/credentials/certifications/exams/az-400/
+	
+	https://azuredevopslabs.com/
 			
